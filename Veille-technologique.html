@@ -8,47 +8,48 @@
     <link rel="stylesheet" href="assets/css/techno.html">
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        .veille-img {
-            width: 100%;
-            max-width: 480px;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 12px;
-            display: block;
-            margin: 15px auto;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-        }
-            text-align: center;
+        .problematique-box {
+            border: 2px solid #a78bfa;
+            padding: 20px 30px;
+            margin: 20px 0;
+            background: rgba(167, 139, 250, 0.08);
+            border-radius: 10px;
             font-style: italic;
-            font-size: 0.82em;
-            opacity: 0.7;
-            margin-top: -8px;
-            margin-bottom: 20px;
+            font-size: 1.1em;
+            text-align: center;
         }
         .highlight-box {
             border-left: 4px solid #f07800;
             padding: 12px 18px;
-            margin: 15px 0;
+            margin: 20px 0;
             background: rgba(240, 120, 0, 0.08);
             border-radius: 0 8px 8px 0;
         }
-        .veille-table {
-            width: 100%;
-            border-collapse: collapse;
+        .tech-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
             margin: 20px 0;
         }
-        .veille-table th {
-            background-color: #3a3af0;
-            color: white;
-            padding: 10px;
-            text-align: left;
-        }
-        .veille-table td {
-            padding: 10px;
-            border-bottom: 1px solid rgba(255,255,255,0.15);
-        }
-        .veille-table tr:nth-child(even) td {
+        .tech-card {
             background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 20px;
+            border-top: 3px solid #f07800;
+        }
+        .tech-card h4 { margin-bottom: 10px; }
+        .phase-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        .phase-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .phase-list li:last-child { border-bottom: none; }
+        @media (max-width: 768px) {
+            .tech-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -68,113 +69,117 @@
 
     <div class="containerv" style="margin-top: 100px;">
         <div class="text-center">
-            <h2 class="orange-text-bar text-center">Veille Technologique "L'extinction de la 2G et 3G en France : 2026, le grand basculement"</h2>
+            <h2 class="orange-text-bar text-center">Veille Technologique — L'extinction de la 2G et 3G en France : 2026, le grand basculement</h2>
         </div><br>
 
-        <!-- PLAN -->
         <div class="section-V intro">
             <div>
                 <h2>Plan</h2>
-                <p>I. Introduction<br>II. Le Contexte : Pourquoi "tuer" ces réseaux ?<br>III. L'Impact : Le défi des systèmes invisibles<br>IV. La Stratégie de Migration<br>V. Conclusion</p>
+                <p>
+                    1. Problématique<br>
+                    2. Introduction : Le contexte du "Switch-off"<br>
+                    3. Analyse des Points de Rupture<br>
+                    4. Les Technologies de Remplacement<br>
+                    5. Enjeux Stratégiques<br>
+                    6. Conclusion et Plan d'Action SISR
+                </p>
             </div>
         </div>
 
-        <!-- PROBLEMATIQUE -->
         <div class="section-V intro">
             <div>
-                <h2>Problématique</h2>
-                <p>L'extinction de la 2G et de la 3G en France est-elle une simple mise à jour technologique, ou un véritable chantier d'infrastructure critique pour les entreprises ?</p>
-            </div>
-        </div>
-
-        <!-- INTRODUCTION -->
-        <div class="section-V intro">
-            <div>
-                <h2>I. Introduction</h2>
-                <p>Bonjour à tous. Aujourd'hui, je vais vous présenter ma veille technologique sur un sujet au cœur de l'actualité 2026 : <b>la fin des réseaux 2G et 3G en France</b>.</p>
-                <p>On a souvent tendance à voir le réseau mobile comme un simple service pour smartphones. Pourtant, en tant que futur technicien SISR, j'ai découvert que cette extinction est en réalité un <b>chantier d'infrastructure colossal</b>. Pourquoi ? Parce qu'on ne débranche pas seulement de vieux téléphones — on déconnecte des millions d'appareils critiques qui font tourner nos entreprises.</p>
-                <div class="highlight-box">
-                    💡 Selon l'ARCEP, en 2025, <b>2,7 millions de cartes SIM</b> étaient encore actives uniquement sur des réseaux 2G/3G en France.
+                <h2>1. Problématique</h2>
+                <div class="problematique-box">
+                    « Fin des réseaux 2G/3G : comment transformer cette rupture technologique en opportunité pour moderniser l'infrastructure des entreprises ? »
                 </div>
             </div>
         </div>
 
-        <!-- CONTEXTE -->
-        <div class="section-V">
-            <div class="text">
-                <h2>II. Le Contexte : Pourquoi "tuer" ces réseaux ?</h2>
-                <p>Les opérateurs historiques comme <b>Orange et SFR</b> ont commencé le débranchement total de la 2G cette année. Mais ce n'est pas par plaisir de supprimer l'ancien.</p>
-                <p>L'objectif est le <b>"Refarming"</b>. En informatique, les fréquences sont une ressource rare. Pour faire passer la 5G partout et augmenter les débits, les opérateurs doivent <b>recycler les fréquences</b> de la 2G et de la 3G.</p>
-                <p>C'est une évolution logique : on remplace une vieille autoroute saturée par une infrastructure moderne, plus rapide et plus sécurisée.</p>
-                <table class="veille-table">
-                    <tr>
-                        <th>Opérateur</th>
-                        <th>Arrêt 2G</th>
-                        <th>Arrêt 3G</th>
-                    </tr>
-                    <tr>
-                        <td>🟠 Orange</td>
-                        <td>Mars → Déc. 2026</td>
-                        <td>Fin 2028</td>
-                    </tr>
-                    <tr>
-                        <td>🔴 SFR</td>
-                        <td>2026</td>
-                        <td>2029</td>
-                    </tr>
-                    <tr>
-                        <td>🔵 Bouygues</td>
-                        <td>2026</td>
-                        <td>2029</td>
-                    </tr>
-                    <tr>
-                        <td>🟣 Free</td>
-                        <td>2026</td>
-                        <td>2029</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-
-        <!-- IMPACT -->
-        <div class="section-V">
-            <div class="text">
-                <h2>III. L'Impact : Le défi des systèmes invisibles</h2>
-                <p>Le vrai danger de cette transition, c'est ce qu'on appelle le <b>"Legacy"</b> (l'héritage). Ma veille m'a permis d'identifier trois secteurs critiques où le technicien SISR joue un rôle clé :</p>
-
-                <p><b>🔒 La Sécurité et la Domotique :</b><br>
-                Des milliers d'alarmes d'entreprises et de boîtiers d'appel d'urgence dans les ascenseurs fonctionnent uniquement en 2G. Près de <b>50% des 650 000 ascenseurs français</b> utilisent encore la 2G pour leur système d'alerte. Sans remplacement du module matériel, ils deviennent muets.</p>
-
-                <p><b>💳 La Monétique :</b><br>
-                Beaucoup de terminaux de paiement (TPE) de commerçants utilisent encore la 3G. Sans mise à jour, plus aucune transaction bancaire n'est possible. Un risque énorme pour les petits commerces.</p>
-
-                <p><b>🏭 L'IoT Industriel :</b><br>
-                Compteurs d'eau, capteurs de température, systèmes de logistique installés il y a 10 ans — ces équipements se retrouvent soudainement isolés du réseau. L'ARCEP estime à <b>3,2 millions</b> le nombre d'objets connectés encore en 2G/3G en France.</p>
-            </div>
-        </div>
-
-        <!-- MIGRATION -->
-        <div class="section-V">
-            <div class="text">
-                <h2>IV. La Stratégie de Migration</h2>
-                <p>Face à cela, j'ai identifié deux solutions majeures qui remplacent ces vieux réseaux :</p>
-                <p><b>1. Le LTE-M et le NB-IoT :</b><br>
-                Ce sont les "petits frères" de la 4G, conçus spécifiquement pour les objets connectés. Ils consomment très peu d'énergie et captent beaucoup mieux à travers les murs et dans les sous-sols — idéal pour les compteurs et capteurs industriels.</p>
-                <p><b>2. La VoLTE (Voice over LTE) :</b><br>
-                Pour la téléphonie d'entreprise, il faut désormais s'assurer que tous les équipements supportent la voix sur le réseau 4G. Sans 3G, la voix ne passera plus sur les anciens systèmes.</p>
+        <div class="section-V intro">
+            <div>
+                <h2>2. Introduction : Le contexte du "Switch-off"</h2>
+                <p>D'ici la fin de l'année 2026, la France connaîtra l'arrêt définitif du réseau 2G, suivi de près par celui de la 3G. Ce processus, appelé <b>Refarming</b>, consiste à libérer les fréquences radio historiques pour les réallouer à la 5G.</p>
+                <p>Pour une organisation, ce n'est pas une simple transition technique : c'est une <b>mutation profonde</b> qui touche à la connectivité des équipements industriels, à la sécurité des bâtiments et à la mobilité des collaborateurs.</p>
                 <div class="highlight-box">
-                    🎯 Le rôle du technicien SISR : <b>auditer le parc matériel</b>, identifier les équipements concernés et planifier leur remplacement avant la coupure.
+                    💡 Les opérateurs Orange, SFR, Bouygues et Free ont tous annoncé l'extinction de leur réseau 2G en 2026, et leur réseau 3G d'ici 2029.
                 </div>
             </div>
         </div>
 
-        <!-- CONCLUSION -->
         <div class="section-V">
             <div class="text">
-                <h2>V. Conclusion</h2>
-                <p>Pour conclure, cette veille m'a appris qu'<b>une technologie ne meurt jamais vraiment seule</b> : elle emporte avec elle tout un écosystème.</p>
-                <p>En tant que professionnel SISR, mon rôle n'est pas seulement de surveiller les serveurs, mais d'<b>anticiper ces ruptures technologiques</b> pour conseiller l'entreprise sur le renouvellement de son parc matériel.</p>
-                <p>Le passage à la <b>"France tout-4G/5G"</b> est une opportunité de rendre nos infrastructures plus fiables, plus modernes et mieux sécurisées pour l'avenir.</p>
+                <h2>3. Analyse des Points de Rupture</h2>
+                <p>Le premier rôle du technicien SISR est d'identifier les équipements qui deviendront des <b>"poids morts"</b> sans intervention :</p>
+                <ul class="phase-list">
+                    <li>
+                        <b>📦 Le parc M2M (Machine-to-Machine)</b><br>
+                        Des millions d'objets — traceurs logistiques, terminaux de paiement, compteurs — utilisent des puces uniquement 2G.
+                    </li>
+                    <li>
+                        <b>🔒 La Sécurité Critique</b><br>
+                        Systèmes d'alarme et boutons d'urgence dans les ascenseurs reposent sur la 2G pour sa capacité à traverser les structures bétonnées (<b>Deep Indoor</b>).
+                    </li>
+                    <li>
+                        <b>📞 La Téléphonie (VoLTE)</b><br>
+                        Avec la fin de la 3G, la voix doit passer par le réseau 4G. Cela impose une vérification des flottes mobiles et des passerelles GSM des standards téléphoniques (IPBX).
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-V">
+            <div class="text">
+                <h2>4. Les Technologies de Remplacement</h2>
+                <p>La fin de la 2G/3G pousse les entreprises vers des protocoles <b>LPWAN</b> (Low Power Wide Area Network) plus performants et sécurisés :</p>
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <h4>📡 LTE-M</h4>
+                        <p>Remplaçant idéal pour les ascenseurs et l'industrie. Supporte la voix, faible consommation, excellente pénétration dans les bâtiments.</p>
+                    </div>
+                    <div class="tech-card">
+                        <h4>📊 NB-IoT</h4>
+                        <p>Dédié aux capteurs simples — compteurs, parkings. Autonomie de batterie jusqu'à <b>10 ans</b>.</p>
+                    </div>
+                    <div class="tech-card">
+                        <h4>🚀 5G RedCap</h4>
+                        <p>La norme post-2026. Fiabilité de la 5G à coût réduit, idéale pour les objets connectés complexes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-V">
+            <div class="text">
+                <h2>5. Enjeux Stratégiques</h2>
+                <ul class="phase-list">
+                    <li>
+                        <b>🔐 Cybersécurité</b><br>
+                        La 2G est vulnérable aux attaques type <b>IMSI Catcher</b>. La 5G apporte un chiffrement natif et une sécurité accrue.
+                    </li>
+                    <li>
+                        <b>🌿 Green IT</b><br>
+                        Les réseaux modernes sont moins énergivores, réduisant l'empreinte carbone de l'infrastructure numérique.
+                    </li>
+                    <li>
+                        <b>🌐 Modernisation IP</b><br>
+                        Le passage au "Tout-IP" permet une supervision centralisée et une meilleure interconnexion des services.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-V">
+            <div class="text">
+                <h2>6. Conclusion et Plan d'Action SISR</h2>
+                <p>L'extinction de la 2G/3G est une <b>modernisation forcée</b>. Le technicien SISR doit piloter cette transition en trois étapes :</p>
+                <ul class="phase-list">
+                    <li><b>📋 Phase 1 — Inventaire :</b> Recenser les équipements via des outils de gestion de parc (type <b>GLPI</b>).</li>
+                    <li><b>🔧 Phase 2 — Migration :</b> Prioriser le remplacement des systèmes critiques (alarmes/ascenseurs) par des modules <b>LTE-M</b>.</li>
+                    <li><b>📡 Phase 3 — Supervision :</b> Intégrer ces nouveaux objets IP dans la supervision réseau (type <b>Zabbix</b>) pour garantir leur disponibilité.</li>
+                </ul>
+                <div class="highlight-box">
+                    🎯 Cette veille m'a appris qu'une technologie ne meurt jamais seule : elle emporte avec elle tout un écosystème. En tant que futur technicien SISR, anticiper ces ruptures est au cœur de mon métier.
+                </div>
             </div>
         </div>
 
