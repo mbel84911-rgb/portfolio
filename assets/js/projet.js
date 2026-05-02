@@ -6,7 +6,7 @@ const projects = [
     { src: "assets/imgs/glpi.png",         alt: "Déploiement GLPI",       doc: "documentation/deploiement GLPI.pdf" },
     { src: "assets/imgs/haproxy.png",      alt: "HAProxy",                doc: "documentation/haproxy.pdf" },
     { src: "assets/imgs/POWERSHELL.png",   alt: "PowerShell",             doc: "documentation/POWERSHELL.pdf" },
-    { src: "assets/imgs/ppe-elephant.png", alt: "PPE Éléphant",           doc: "documentation/elephant.pdf" },
+    { src: "assets/imgs/ppe-elephanto.png", alt: "PPE Éléphant",           doc: "documentation/elephant.pdf" },
 ];
 
 function updateGrid() {
